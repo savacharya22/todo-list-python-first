@@ -1,3 +1,5 @@
+
+from colored import fg, attr, bg
 from todo_functions import add_todo, remove_todo, mark_todo,view_todo
 
 
@@ -14,7 +16,7 @@ except FileNotFoundError:
     todo_file.close()
     print("I am except block")
 
-print("Welcome to your todo list")
+print(f"{fg('black')}{bg('white')}Welcome to your todo list{attr('reset')}")
 
 def create_menu():
     print("1.Enter 1 to  Add item to your list")
